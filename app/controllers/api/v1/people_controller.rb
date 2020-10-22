@@ -9,7 +9,6 @@ class Api::V1::PeopleController < ApplicationController
     
     def show
         person = Person.find_by_id(params[:id])
-        debugger
         respond_with person
     end
 
@@ -17,9 +16,7 @@ class Api::V1::PeopleController < ApplicationController
         person = Person.new(person_params)
         person.save!
         consume!(person)
-        
-        debugger
-        
+
         respond_with person
     end
 
