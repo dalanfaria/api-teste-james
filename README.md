@@ -4,7 +4,7 @@
 
  Clonar o projeto do GITHUB
 ```
-git@github.com:dalanfaria/api-teste-james.git
+git clone git@github.com:dalanfaria/api-teste-james.git
 ```
 
 Instalar as gems
@@ -38,7 +38,13 @@ Popule o bd com os dados iniciais:
  rake db:seed
 ```
 
-url
+Iniciar o service
+
+```
+ rails s
+```
+
+URLS DISPONIBILIZADAS
 
 ```
  localhost:3000/api/v1/people/1.json?
