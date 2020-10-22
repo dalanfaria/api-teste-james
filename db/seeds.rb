@@ -13,7 +13,12 @@
         last_name: Faker::Name.last_name,
         date_of_birth: Faker::Date.birthday,
         james: [true, false].sample,
-        age: Random.rand(99),
         gender: ['masculino', 'feminino'].sample
 	})
+end
+
+
+Person.order(:id).each do |p|
+    date = Date.current.year - p.date_of_birth.year
+    p.update_column(:age, date)
 end
