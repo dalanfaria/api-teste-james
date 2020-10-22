@@ -1,24 +1,47 @@
-# README
+### README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Clonar o projeto
 
-Things you may want to cover:
+ Clonar o projeto do GITHUB
+```
+git@github.com:dalanfaria/api-teste-james.git
+```
 
-* Ruby version
+Instalar as gems
 
-* System dependencies
+```
+bundle install
+```
 
-* Configuration
+Duplicar o arquivo database.yml.example para database.yml
+Configurar conforme os acessos local do postgres, exemplo:
 
-* Database creation
+```
+username: postgres
+password: postgres
+```
 
-* Database initialization
+ Crie o banco de dados:
 
-* How to run the test suite
+```
+ rake db:create
+```
+ Gerar as tabelas:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+ rake db:migrate
+```
 
-* Deployment instructions
+Popule o bd com os dados iniciais:
 
-* ...
+```
+ rake db:seed
+```
+
+url
+
+```
+ localhost:3000/api/v1/people/1.json?
+ localhost:3000/api/v1/people.json?
+```
+
